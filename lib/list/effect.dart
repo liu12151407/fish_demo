@@ -6,13 +6,13 @@ import 'state.dart';
 Effect<ListState> buildEffect() {
   return combineEffects(<Object, Effect<ListState>>{
     ListAction.action: _onAction,
-    ListAction.initList: initList,
+    Lifecycle.initState: _onInit,
   });
 }
 
 void _onAction(Action action, Context<ListState> ctx) {}
 
-void initList(Action action, Context<ListState> ctx) {
+void _onInit(Action action, Context<ListState> ctx) {
   List<ItemState> mockData = List();
   for (int i = 0; i < 20; i++) {
     mockData

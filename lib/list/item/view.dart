@@ -5,8 +5,7 @@ import 'state.dart';
 
 Widget buildView(ItemState state, Dispatch dispatch, ViewService viewService) {
   return Container(
-    margin: EdgeInsets.only(left: 10),
-    height: 120,
+    padding: EdgeInsets.all(20),
     color: Colors.white,
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,12 +24,11 @@ Widget buildView(ItemState state, Dispatch dispatch, ViewService viewService) {
         //右侧
         Expanded(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               //标题部分
               Container(
-                height: 30,
                 child: Text(
                   state.title,
                   style: TextStyle(fontSize: 22.0),
