@@ -9,6 +9,7 @@ Widget buildView(
   return Scaffold(
     appBar: AppBar(
       title: Text("入口页面"),
+      backgroundColor: state.themeColor,
     ),
     body: Container(
       child: Center(

@@ -8,6 +8,7 @@ Widget buildView(ListState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
     appBar: AppBar(
       title: Text("列表页"),
+      backgroundColor: state.themeColor,
     ),
     body: Container(
       child: ListView.separated(
