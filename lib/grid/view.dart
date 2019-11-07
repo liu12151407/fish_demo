@@ -1,10 +1,12 @@
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 
+import '../model/grid_model.dart';
 import 'state.dart';
 
 Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
   Widget itemWidget(index) {
+    GridModel model = state.models[index];
     return Center(
       child: Card(
         color: Colors.lightBlueAccent,
@@ -15,7 +17,11 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
             width: 200,
             height: 200,
             child: Center(
-              child: Text("啦啦啦啦"),
+              ///展示name字段
+              child: Text(
+                model.name ?? "",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
         ),
@@ -33,7 +39,7 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
       crossAxisSpacing: 10,
       childAspectRatio: 1 / 1,
       padding: EdgeInsets.all(10),
-      children: List.generate(10, (index) {
+      children: List.generate(state.models.length, (index) {
         return itemWidget(index);
       }),
     ),
