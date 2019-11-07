@@ -3,6 +3,7 @@ import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 
 import 'grid/page.dart';
+import 'list/page.dart';
 
 /**
  * ***********************************************
@@ -20,6 +21,7 @@ Widget createApp() {
       PageRoutes(pages: <String, Page<Object, dynamic>>{
     EntrancePage.sName: EntrancePage(),
     GridPage.sName: GridPage(),
+    ListPage.sName: ListPage(),
   });
   return MaterialApp(
     title: "FishDemo",

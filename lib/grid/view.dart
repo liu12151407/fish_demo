@@ -1,3 +1,4 @@
+import 'package:fish_demo/grid/action.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,9 @@ Widget buildView(GridState state, Dispatch dispatch, ViewService viewService) {
         color: Colors.lightBlueAccent,
         child: InkWell(
           splashColor: Colors.blue.withAlpha(100),
-          onTap: () {},
+          onTap: () {
+            dispatch(GridActionCreator.onOpenList());
+          },
           child: Container(
             width: 200,
             height: 200,

@@ -1,7 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 
 //TODO replace with your own action
-enum GridAction { action, loadData }
+enum GridAction { action, loadData, openList }
 
 class GridActionCreator {
   static Action onAction() {
@@ -10,5 +10,9 @@ class GridActionCreator {
 
   static Action onLoadData() {
     return const Action(GridAction.loadData);
+  }
+
+  static Action onOpenList() {
+    return const Action(GridAction.openList);
   }
 }
