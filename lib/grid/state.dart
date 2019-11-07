@@ -4,7 +4,7 @@ import '../model/grid_model.dart';
 
 class GridState implements Cloneable<GridState> {
   ///存放数据
-  List<GridModel> models = List();
+  List<GridModel> models;
 
   @override
   GridState clone() {

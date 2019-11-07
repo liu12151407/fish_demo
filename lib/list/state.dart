@@ -1,10 +1,13 @@
 import 'package:fish_redux/fish_redux.dart';
 
+import 'item/state.dart';
+
 class ListState implements Cloneable<ListState> {
+  List<ItemState> items;
 
   @override
   ListState clone() {
-    return ListState();
+    return ListState()..items = items;
   }
 }
 

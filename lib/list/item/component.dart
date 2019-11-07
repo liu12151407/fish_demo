@@ -6,6 +6,7 @@ import 'state.dart';
 import 'view.dart';
 
 class ItemComponent extends Component<ItemState> {
+  static final sName="/ItemComponent";
   ItemComponent()
       : super(
             effect: buildEffect(),
