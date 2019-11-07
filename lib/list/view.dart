@@ -4,5 +4,22 @@ import 'package:flutter/material.dart';
 import 'state.dart';
 
 Widget buildView(ListState state, Dispatch dispatch, ViewService viewService) {
-  return Container();
+  ListAdapter adapter = viewService.buildAdapter();
+  return Scaffold(
+    appBar: AppBar(
+      title: Text("列表页"),
+    ),
+    body: Container(
+      child: ListView.separated(
+        itemBuilder: adapter.itemBuilder,
+        separatorBuilder: (ctx, index) {
+          return Container(
+            height: 1,
+            color: Colors.grey[200],
+          );
+        },
+        itemCount: adapter.itemCount,
+      ),
+    ),
+  );
 }

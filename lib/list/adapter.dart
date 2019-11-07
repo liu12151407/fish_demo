@@ -4,8 +4,8 @@ import 'package:fish_redux/fish_redux.dart';
 import 'item/component.dart';
 import 'state.dart';
 
-class ListAdapter extends DynamicFlowAdapter<ListState> {
-  ListAdapter()
+class DemoAdapter extends DynamicFlowAdapter<ListState> {
+  DemoAdapter()
       : super(
           pool: <String, Component<Object>>{
             ItemComponent.sName: ItemComponent(),
