@@ -20,6 +20,3 @@ doc/api/
 *.js.deps
 *.js.map
 
-android/
-ios/
-.idea/
